@@ -11,6 +11,7 @@
         table {
             width: 600px;
             border-collapse: collapse;
+            position: relative;
         }
         td, th {
             border: 1px solid black;
@@ -23,8 +24,16 @@
             background-color: lightgray;
         }
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
+        }
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+        tbody tr:nth-child(even) {
+            background-color: lightgray;
         }
         td.num {
             text-align: right;
@@ -36,8 +45,10 @@
     <table>
         <caption>População das Unidades Federativas</caption>
         <thead>
-            <th scope="col">Estado</th>
-            <th scope="col" style="width: 100px;">População</th>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
+            </tr>
         </thead>
         <tbody>
             <tr>
@@ -100,13 +111,27 @@
                 <td>Mato Grosso</td>
                 <td class="num">3.035.122</td>
             </tr>
-
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2.068.017</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1.562.409</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1.383.445</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">733.559</td>
+            </tr>
         </tbody>
         <tfoot>
             <th scope="row">Total de habitantes</th>
             <td class="num"><strong>210.147.145</strong></td>
         </tfoot>
-        
     </table>
 </body>
 </html>
